@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date             : Mon Oct 31 17:21:19 2016
+| Date             : Mon Oct 31 18:22:07 2016
 | Host             : seunghwan running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_module_power_routed.rpt -pb Top_module_power_summary_routed.pb -rpx Top_module_power_routed.rpx
 | Design           : Top_module
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.107  |
-| Dynamic (W)              | 0.010  |
+| Total On-Chip Power (W)  | 0.108  |
+| Dynamic (W)              | 0.011  |
 | Device Static (W)        | 0.097  |
 | Effective TJA (C/W)      | 4.6    |
 | Max Ambient (C)          | 84.5   |
@@ -49,16 +49,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      172 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       53 |     63400 |            0.08 |
-|   CARRY4       |    <0.001 |       12 |     15850 |            0.08 |
-|   Register     |    <0.001 |       74 |    126800 |            0.06 |
-|   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |    <0.001 |      121 |       --- |             --- |
+| Clocks         |     0.001 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |      470 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      204 |     63400 |            0.32 |
+|   CARRY4       |    <0.001 |       42 |     15850 |            0.26 |
+|   Register     |    <0.001 |      179 |    126800 |            0.14 |
+|   Others       |     0.000 |       18 |       --- |             --- |
+| Signals        |    <0.001 |      300 |       --- |             --- |
 | I/O            |     0.008 |       19 |       210 |            9.05 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.107 |          |           |                 |
+| Total          |     0.108 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -68,7 +68,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |
+| Vccint    |       1.000 |     0.018 |       0.003 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -137,10 +137,10 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| Top_module         |     0.010 |
+| Top_module         |     0.011 |
 |   counter_ss_drive |    <0.001 |
 |     data_decode    |    <0.001 |
-|   top_counter      |    <0.001 |
+|   top_counter      |     0.002 |
 |     counter_min    |    <0.001 |
 |     counter_msec_1 |    <0.001 |
 |     counter_msec_2 |    <0.001 |

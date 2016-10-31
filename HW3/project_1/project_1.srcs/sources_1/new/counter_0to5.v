@@ -45,13 +45,19 @@ module counter_0to5(
     reg [3:0] temp_3;
     always @(posedge clk) temp_3 <= temp_2;
         
-    always@(posedge clk, posedge temp_3)
-    begin
+    reg[24:0] delay = 0;    
+        
+    always@(posedge clk, posedge temp_3) begin
     if(temp_3) Dout <= 4'd0;
     // else if(push) Dout <= Dout;
-    else if(inc)
-        if(fin) Dout <= 4'd0;
-        else  Dout <= Dout +1;
+    else if (delay < 1000000) delay = delay + 1;
+    else if (delay == 1000000) begin
+        if(inc) begin
+            if(fin) Dout <= 4'd0;
+            else  Dout <= Dout +1;
+            end
+        delay = 0;
+        end
     end
         
     assign fin = (Dout == 4'd5)? 1:0;

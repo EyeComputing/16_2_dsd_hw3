@@ -16,8 +16,8 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/Desktop/inc_module.v
   C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/counter_0to5.v
+  C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/Desktop/inc_module.v
   C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/Desktop/CounterTo9.v
   C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_decoder.v
   C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/top_counter.v
