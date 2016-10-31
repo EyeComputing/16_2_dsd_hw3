@@ -16,7 +16,7 @@ module ss_drive(
     output ssE,
     output ssF,
     output ssG,
-    output reg ssDP,
+    output ssDP,
     output reg AN7,
     output reg AN6,
     output reg AN5,
@@ -28,19 +28,21 @@ module ss_drive(
     );
     
 	 
-	
+	reg dp;
 	reg [2:0] sel;
 	reg [3:0] data;
 	integer cnt;
 	
 
 	always @(posedge clk)
+	   /*
 		if(rst)
 			begin
 			cnt <= 0;
 			sel <= 3'b000;
 			end
-		else if (cnt < 2500)
+		else */
+		if (cnt < 2500)
 			begin
 			cnt <= cnt + 1;
 			sel <= sel;
@@ -55,7 +57,7 @@ module ss_drive(
 		case(sel)
 			3'b000 : begin
 				data = data0;
-				ssDP = 1;
+				dp = 1;
 				AN7 = 1;
                 AN6 = 1;
                 AN5 = 1;
@@ -67,7 +69,7 @@ module ss_drive(
 				end
 			3'b001 : begin
                 data = data1;
-                ssDP = 1;
+                dp = 1;
                 AN7 = 1;
                 AN6 = 1;
                 AN5 = 1;
@@ -79,7 +81,7 @@ module ss_drive(
                 end
             3'b010 : begin
                 data = data2;
-                ssDP = 0;
+                dp = 0;
                 AN7 = 1;
                 AN6 = 1;
                 AN5 = 1;
@@ -91,7 +93,7 @@ module ss_drive(
                 end                				
 			3'b011 : begin
                 data = data3;
-                ssDP = 1;
+                dp = 1;
                 AN7 = 1;
                 AN6 = 1;
                 AN5 = 1;
@@ -103,7 +105,7 @@ module ss_drive(
                 end      
         	3'b100 : begin
                 data = data4;
-                ssDP = 1;
+                dp = 1;
                 AN7 = 1;
                 AN6 = 1;
                 AN5 = 1;
@@ -115,6 +117,7 @@ module ss_drive(
                 end
           default : begin
                data = 4'b0000;
+               dp = 1;
                AN7 = 1;
                AN6 = 1;
                AN5 = 1;
@@ -128,6 +131,7 @@ module ss_drive(
 	
 	ss_decoder data_decode (
     .Din(data), 
+    .Dp(dp),
     .a(ssA), 
     .b(ssB), 
     .c(ssC), 

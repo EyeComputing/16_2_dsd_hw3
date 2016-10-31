@@ -19,3 +19,10 @@ update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
 update_compile_order -fileset sources_1
+close [ open C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/top_counter.v w ]
+add_files C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/top_counter.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/counter_0to5.v w ]
+add_files C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/counter_0to5.v
+update_compile_order -fileset sources_1

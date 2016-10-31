@@ -2,6 +2,7 @@
 
 module ss_decoder(
     input [3:0] Din,
+    input Dp,
     output reg a,
     output reg b,
     output reg c,
@@ -11,6 +12,14 @@ module ss_decoder(
     output reg g,
     output reg dp
     );
+    
+    always @(Dp) begin
+    if ( Dp == 1 )
+        dp = 1;
+    else 
+        dp = 0;
+    end
+    
 	 // Combinational assignments는 blocking으로 하는것이 맞다.
 	 always @(Din)
 	 case(Din)

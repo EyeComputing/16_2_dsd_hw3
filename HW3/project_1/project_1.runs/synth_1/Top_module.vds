@@ -1,0 +1,351 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Mon Oct 31 14:29:26 2016
+# Process ID: 10196
+# Current directory: C:/Workspace/DSD/team_project/HW3/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log Top_module.vds -mode batch -messageDb vivado.pb -notrace -source Top_module.tcl
+# Log file: C:/Workspace/DSD/team_project/HW3/project_1/project_1.runs/synth_1/Top_module.vds
+# Journal file: C:/Workspace/DSD/team_project/HW3/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top_module.tcl -notrace
+Command: synth_design -top Top_module -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8328 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 273.535 ; gain = 67.078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Top_module' [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:23]
+INFO: [Synth 8-638] synthesizing module 'ss_drive' [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_drive.v:3]
+INFO: [Synth 8-638] synthesizing module 'ss_decoder' [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_decoder.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_decoder.v:25]
+INFO: [Synth 8-256] done synthesizing module 'ss_decoder' (1#1) [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_decoder.v:3]
+INFO: [Synth 8-256] done synthesizing module 'ss_drive' (2#1) [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_drive.v:3]
+WARNING: [Synth 8-3848] Net min in module/entity Top_module does not have driver. [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:45]
+WARNING: [Synth 8-3848] Net sec_2 in module/entity Top_module does not have driver. [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:45]
+WARNING: [Synth 8-3848] Net sec_1 in module/entity Top_module does not have driver. [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:45]
+WARNING: [Synth 8-3848] Net msec_1 in module/entity Top_module does not have driver. [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:45]
+WARNING: [Synth 8-3848] Net msec_2 in module/entity Top_module does not have driver. [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:45]
+INFO: [Synth 8-256] done synthesizing module 'Top_module' (3#1) [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:23]
+WARNING: [Synth 8-3331] design ss_drive has unconnected port rst
+WARNING: [Synth 8-3331] design ss_drive has unconnected port mask[7]
+WARNING: [Synth 8-3331] design ss_drive has unconnected port mask[6]
+WARNING: [Synth 8-3331] design ss_drive has unconnected port mask[5]
+WARNING: [Synth 8-3331] design Top_module has unconnected port push
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 310.762 ; gain = 104.305
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data4[3] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data4[2] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data4[1] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data4[0] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data3[3] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data3[2] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data3[1] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data3[0] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data2[3] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data2[2] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data2[1] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data2[0] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data1[3] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data1[2] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data1[1] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data1[0] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data0[3] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data0[2] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data0[1] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+WARNING: [Synth 8-3295] tying undriven pin counter_ss_drive:data0[0] to constant 0 [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v:65]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 310.762 ; gain = 104.305
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/constrs_1/imports/constrs/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/constrs_1/imports/constrs/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/constrs_1/imports/constrs/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_module_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 606.551 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'a_reg' [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_decoder.v:27]
+WARNING: [Synth 8-327] inferring latch for variable 'b_reg' [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_decoder.v:28]
+WARNING: [Synth 8-327] inferring latch for variable 'c_reg' [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_decoder.v:29]
+WARNING: [Synth 8-327] inferring latch for variable 'd_reg' [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_decoder.v:30]
+WARNING: [Synth 8-327] inferring latch for variable 'e_reg' [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_decoder.v:31]
+WARNING: [Synth 8-327] inferring latch for variable 'f_reg' [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_decoder.v:32]
+WARNING: [Synth 8-327] inferring latch for variable 'g_reg' [C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/imports/sources/ss_decoder.v:33]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	  11 Input      1 Bit        Muxes := 8     
+	   6 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ss_decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input      1 Bit        Muxes := 8     
+Module ss_drive 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design Top_module has port AN5 driven by constant 1
+WARNING: [Synth 8-3917] design Top_module has port AN6 driven by constant 1
+WARNING: [Synth 8-3917] design Top_module has port AN7 driven by constant 1
+WARNING: [Synth 8-3331] design Top_module has unconnected port rst
+WARNING: [Synth 8-3331] design Top_module has unconnected port push
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 606.551 ; gain = 400.094
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\counter_ss_drive/data_decode/g_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter_ss_drive/data_decode/f_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter_ss_drive/data_decode/e_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter_ss_drive/data_decode/d_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter_ss_drive/data_decode/c_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter_ss_drive/data_decode/b_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter_ss_drive/data_decode/a_reg )
+WARNING: [Synth 8-3332] Sequential element (counter_ss_drive/data_decode/a_reg) is unused and will be removed from module Top_module.
+WARNING: [Synth 8-3332] Sequential element (counter_ss_drive/data_decode/b_reg) is unused and will be removed from module Top_module.
+WARNING: [Synth 8-3332] Sequential element (counter_ss_drive/data_decode/c_reg) is unused and will be removed from module Top_module.
+WARNING: [Synth 8-3332] Sequential element (counter_ss_drive/data_decode/d_reg) is unused and will be removed from module Top_module.
+WARNING: [Synth 8-3332] Sequential element (counter_ss_drive/data_decode/e_reg) is unused and will be removed from module Top_module.
+WARNING: [Synth 8-3332] Sequential element (counter_ss_drive/data_decode/f_reg) is unused and will be removed from module Top_module.
+WARNING: [Synth 8-3332] Sequential element (counter_ss_drive/data_decode/g_reg) is unused and will be removed from module Top_module.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 606.551 ; gain = 400.094
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 606.551 ; gain = 400.094
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    12|
+|3     |LUT1   |    33|
+|4     |LUT2   |    19|
+|5     |LUT3   |     7|
+|6     |LUT4   |     1|
+|7     |FDRE   |    35|
+|8     |IBUF   |     1|
+|9     |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+---------+------+
+|      |Instance           |Module   |Cells |
++------+-------------------+---------+------+
+|1     |top                |         |   125|
+|2     |  counter_ss_drive |ss_drive |   107|
++------+-------------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 606.551 ; gain = 400.094
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 606.551 ; gain = 104.305
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 606.551 ; gain = 400.094
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 606.551 ; gain = 400.094
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 606.551 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 14:30:05 2016...

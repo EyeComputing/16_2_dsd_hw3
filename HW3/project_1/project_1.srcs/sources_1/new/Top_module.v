@@ -42,7 +42,7 @@ module Top_module(
     output AN7
     );
     
-    wire [3:0] min,sec_1, sec_1, msec_1, msec_2;
+    wire [3:0] min, sec_1, sec_2, msec_1, msec_2;
     
     
     
@@ -50,11 +50,18 @@ module Top_module(
     
     
     
-    
-    
-    
-    
-    
+    /*
+    top_counter top_counter (
+        .clk(clk),
+        .rst(rst),
+        .push(push),
+        .min(min),
+        .sec_1(sec_1),
+        .sec_2(sec_2),
+        .msec_1(msec_1),
+        .msec_2(msec_2)
+        );
+   */
     ss_drive counter_ss_drive (
             .clk(clk),
             .rst(rst),
