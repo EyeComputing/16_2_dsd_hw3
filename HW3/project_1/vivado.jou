@@ -2,27 +2,41 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sat Oct 29 16:45:18 2016
-# Process ID: 4088
+# Start of session at: Mon Oct 31 17:10:49 2016
+# Process ID: 8124
 # Current directory: C:/Workspace/DSD/team_project/HW3/project_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10696 C:\Workspace\DSD\team_project\HW3\project_1\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12392 C:\Workspace\DSD\team_project\HW3\project_1\project_1.xpr
 # Log file: C:/Workspace/DSD/team_project/HW3/project_1/vivado.log
 # Journal file: C:/Workspace/DSD/team_project/HW3/project_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Workspace/DSD/team_project/HW3/project_1/project_1.xpr
 update_compile_order -fileset sources_1
-file mkdir C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new
-close [ open C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v w ]
-add_files C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/Top_module.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-update_compile_order -fileset sources_1
-close [ open C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/top_counter.v w ]
-add_files C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/top_counter.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-close [ open C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/counter_0to5.v w ]
-add_files C:/Workspace/DSD/team_project/HW3/project_1/project_1.srcs/sources_1/new/counter_0to5.v
-update_compile_order -fileset sources_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Workspace/DSD/team_project/HW3/project_1/project_1.runs/impl_1/Top_module.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+refresh_hw_target {localhost:3121/xilinx_tcf/Digilent/210292746003A}
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Workspace/DSD/team_project/HW3/project_1/project_1.runs/impl_1/Top_module.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]

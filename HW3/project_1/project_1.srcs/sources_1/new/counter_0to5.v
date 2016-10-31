@@ -51,7 +51,7 @@ module counter_0to5(
     // else if(push) Dout <= Dout;
     else if(inc)
         if(fin) Dout <= 4'd0;
-        else  Dout <= #1000 Dout +1;
+        else  Dout <= Dout +1;
     end
         
     assign fin = (Dout == 4'd5)? 1:0;
