@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2016/10/29 18:14:49
+// Create Date: 2016/10/29 17:27:13
 // Design Name: 
-// Module Name: counter_0to5
+// Module Name: CounterTo9
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,42 +20,41 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module counter_0to5(
+module CounterTo9(
     input clk,
     input rst,
     input inc,
     output TC,
     output reg[3:0] Dout
     );
-    
     wire fin;
-    // reg first;
+   // reg first;
+    
     //reg inc;
-     /*   
-        always@(posedge clk, posedge push)
-        begin
-        if(push) 
-        
-        end
-       */ 
+ /*   
+    always@(posedge clk, posedge push)
+    begin
+    if(push) 
+    
+    end
+   */ 
     reg [3:0] temp_1;
     always @(posedge clk) temp_1 <= rst;
     reg [3:0] temp_2;
     always @(posedge clk) temp_2 <=temp_1;
     reg [3:0] temp_3;
     always @(posedge clk) temp_3 <= temp_2;
-        
+    
     always@(posedge clk, posedge temp_3)
     begin
     if(temp_3) Dout <= 4'd0;
-    // else if(push) Dout <= Dout;
+   // else if(push) Dout <= Dout;
     else if(inc)
         if(fin) Dout <= 4'd0;
         else  Dout <= #1000 Dout +1;
     end
-        
-    assign fin = (Dout == 4'd5)? 1:0;
+    
+    assign fin = (Dout == 4'd9)? 1:0;
     assign TC = fin & inc;
-        
     
 endmodule

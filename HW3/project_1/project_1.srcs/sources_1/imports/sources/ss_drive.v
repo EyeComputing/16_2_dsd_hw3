@@ -2,7 +2,6 @@
 
 module ss_drive(
     input clk,
-    input rst,
     input [3:0] data4,
     input [3:0] data3,
     input [3:0] data2,

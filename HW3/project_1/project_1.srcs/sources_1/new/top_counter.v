@@ -31,13 +31,51 @@ module top_counter(
     output [3:0] msec_2
     );
     
-    //wire tc0, tc1, tc2, tc3, tc4, tc5;
+    
+    wire tc0, tc1, tc2, tc3, tc4, tc5;
     
     
+    inc_module push_module(
+        .clk(clk),
+        .push(push),
+        .inc(tc0)
+        );
     
-    
-    
-    
+    CounterTo9 counter_msec_2 (
+        .clk(clk),
+        .rst(rst),
+        .inc(tc0),
+        .TC(tc1),
+        .Dout(msec_2)
+        );
+    CounterTo9 counter_msec_1 (
+        .clk(clk),
+        .rst(rst),
+        .inc(tc1),
+        .TC(tc2),
+        .Dout(msec_1)
+        );    
+    CounterTo9 counter_sec_1 (
+        .clk(clk),
+        .rst(rst),
+        .inc(tc2),
+        .TC(tc3),
+        .Dout(sec_1)
+        );    
+    counter_0to5 counter_sec_2 (
+        .clk(clk),
+        .rst(rst),
+        .inc(tc3),
+        .TC(tc4),
+        .Dout(sec_2)
+        );
+    CounterTo9 counter_min (
+        .clk(clk),
+        .rst(rst),
+        .inc(tc4),
+        .TC(tc5),
+        .Dout(min)
+        );        
     
     
 endmodule

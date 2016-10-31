@@ -44,13 +44,6 @@ module Top_module(
     
     wire [3:0] min, sec_1, sec_2, msec_1, msec_2;
     
-    
-    
-    
-    
-    
-    
-    /*
     top_counter top_counter (
         .clk(clk),
         .rst(rst),
@@ -61,10 +54,9 @@ module Top_module(
         .msec_1(msec_1),
         .msec_2(msec_2)
         );
-   */
+   
     ss_drive counter_ss_drive (
             .clk(clk),
-            .rst(rst),
             .data4(min),
             .data3(sec_2),
             .data2(sec_1),
